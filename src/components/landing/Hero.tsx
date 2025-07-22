@@ -14,7 +14,7 @@ export default function Hero() {
   ]
 
   return (
-    <section className="py-20 lg:py-32 bg-background relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-background relative overflow-hidden min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/cogent-hero-no-watermark.png)' }}>
       <div className="container mx-auto text-center px-4">
         <div className="mb-8 h-20 flex items-center justify-center">
           <TypingAnimation 
