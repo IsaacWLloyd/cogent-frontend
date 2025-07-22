@@ -23,21 +23,18 @@ export default function Hero() {
             />
           </div>
           
-          {/* CTA Section */}
           <div className={`max-w-md mx-auto space-y-4 transition-all duration-1000 ${
             showCTA ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-            <Card className="bg-card border border-border">
+            <Card className="bg-cogent-dark border border-border">
               <CardContent className="p-6">
-                <h3 className="font-lora font-semibold mb-4 text-foreground">Join the Waitlist</h3>
+                <h3 className="font-lora font-semibold mb-4 text-white">Join the Waitlist</h3>
                 <div className="space-y-3">
                   <Input 
                     type="email" 
                     placeholder="Enter your email"
-                    className="w-full"
+                    className="w-full bg-white text-cogent-dark"
                   />
-                  <Button className="w-full bg-blue-950 hover:bg-blue-900 text-white">
-                  </Button>
                   <Button className="w-full bg-cogent-yellow hover:bg-cogent-yellow/90 text-cogent-dark font-medium">
                     Join Waitlist
                   </Button>

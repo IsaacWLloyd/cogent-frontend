@@ -27,7 +27,7 @@ export default function CTA() {
           <div className={`space-y-6 transition-all duration-1000 ${
             showCTA ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-            <Card className="bg-card border-border">
+            <Card className="bg-cogent-dark border-border">
               <CardContent className="p-8">
                 <h3 className="font-lora font-semibold mb-6 text-white text-xl">Join the Waitlist</h3>
                 <div className="space-y-4">
