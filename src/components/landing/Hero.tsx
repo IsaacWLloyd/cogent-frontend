@@ -23,9 +23,6 @@ export default function Hero() {
             onComplete={() => setShowCTA(true)}
           />
         </div>
-        <h1 className="text-4xl lg:text-6xl font-lora font-bold mb-6 text-foreground">
-          COGENT
-        </h1>
         
         {/* CTA Section */}
         <div className={`max-w-md mx-auto space-y-4 transition-all duration-1000 ${

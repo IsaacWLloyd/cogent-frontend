@@ -10,7 +10,7 @@ export default function CTA() {
   const typingPhrases = [
     "English is the final programming language.",
     "Cogent implements its potential.", 
-    "Welcome to the world of forms."
+    "Don't get left behind."
   ]
 
   return (
