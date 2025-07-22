@@ -27,6 +27,7 @@ export default function Hero() {
             showCTA ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <Card className="bg-cogent-dark border border-border">
+            <Card className="bg-cogent-dark border border-gray-700">
               <CardContent className="p-6">
                 <h3 className="font-lora font-semibold mb-4 text-white">Join the Waitlist</h3>
                 <div className="space-y-3">
@@ -42,6 +43,7 @@ export default function Hero() {
               </CardContent>
             </Card>
             <Card className="bg-cogent-dark border border-border">
+            <Card className="bg-cogent-dark border border-gray-700">
               <CardContent className="p-4">
                 <p className="text-sm text-gray-300 mb-3">Join our Discord community</p>
                 <Button variant="outline" className="w-full bg-white text-cogent-dark border-white hover:bg-gray-100">
