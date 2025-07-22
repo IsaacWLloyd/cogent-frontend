@@ -5,7 +5,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import TypingAnimation from "@/components/ui/typing-animation"
 
 const typingPhrases = [
-  "Welcome to the world of forms."
+  "Welcome to the world of forms.",
+  "Where thought becomes reality.",
+  "COGENT - Code Organization and Generation Enhancement Tool"
 ]
 
 export default function Hero() {

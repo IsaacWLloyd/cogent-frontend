@@ -25,7 +25,7 @@ export default function Navbar() {
           <img 
             src="/cogent-full.png" 
             alt="COGENT" 
-            className="h-12 w-auto"
+            className="h-16 w-auto"
           />
         </div>
         <div className="flex items-center gap-4">
