@@ -35,7 +35,7 @@ export default function Hero() {
                   <Input 
                     type="email" 
                     placeholder="Enter your email"
-                    className="w-full bg-zinc-200 text-zinc-900 border-zinc-300"
+                    className="w-full bg-zinc-300 text-zinc-900 border-zinc-400"
                   />
                   <Button className="w-full bg-cogent-yellow hover:bg-cogent-yellow/90 text-zinc-900 font-medium">
                     Join Waitlist
@@ -46,7 +46,7 @@ export default function Hero() {
             <Card className="bg-zinc-800 border border-zinc-600">
               <CardContent className="p-4">
                 <p className="text-sm text-zinc-300 mb-3">Join our Discord community</p>
-                <Button variant="outline" className="w-full bg-zinc-200 text-zinc-900 border-zinc-300 hover:bg-zinc-300">
+                <Button variant="outline" className="w-full bg-zinc-300 text-zinc-900 border-zinc-400 hover:bg-zinc-400">
                   Discord (Coming Soon)
                 </Button>
               </CardContent>
