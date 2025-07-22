@@ -5,9 +5,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import TypingAnimation from "@/components/ui/typing-animation"
 
 const typingPhrases = [
-  "Welcome to the world of forms.",
-  "Where thought becomes reality.",
-  "COGENT - Code Organization and Generation Enhancement Tool"
+  "English is the final programming language.",
+  "Cogent implements its potential.",
+  "don't get left behind"
 ]
 
 export default function Hero() {
@@ -28,25 +28,25 @@ export default function Hero() {
           <div className={`max-w-md mx-auto space-y-4 transition-all duration-1000 ${
             showCTA ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-            <Card className="bg-cogent-dark border border-gray-700">
+            <Card className="bg-zinc-800 border border-zinc-600">
               <CardContent className="p-6">
-                <h3 className="font-lora font-semibold mb-4 text-white">Join the Waitlist</h3>
+                <h3 className="font-lora font-semibold mb-4 text-zinc-100">Join the Waitlist</h3>
                 <div className="space-y-3">
                   <Input 
                     type="email" 
                     placeholder="Enter your email"
-                    className="w-full bg-white text-cogent-dark"
+                    className="w-full bg-zinc-200 text-zinc-900 border-zinc-300"
                   />
-                  <Button className="w-full bg-cogent-yellow hover:bg-cogent-yellow/90 text-cogent-dark font-medium">
+                  <Button className="w-full bg-cogent-yellow hover:bg-cogent-yellow/90 text-zinc-900 font-medium">
                     Join Waitlist
                   </Button>
                 </div>
               </CardContent>
             </Card>
-            <Card className="bg-cogent-dark border border-gray-700">
+            <Card className="bg-zinc-800 border border-zinc-600">
               <CardContent className="p-4">
-                <p className="text-sm text-gray-300 mb-3">Join our Discord community</p>
-                <Button variant="outline" className="w-full bg-white text-cogent-dark border-white hover:bg-gray-100">
+                <p className="text-sm text-zinc-300 mb-3">Join our Discord community</p>
+                <Button variant="outline" className="w-full bg-zinc-200 text-zinc-900 border-zinc-300 hover:bg-zinc-300">
                   Discord (Coming Soon)
                 </Button>
               </CardContent>
