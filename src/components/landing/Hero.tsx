@@ -7,15 +7,8 @@ import TypingAnimation from "@/components/ui/typing-animation"
 export default function Hero() {
   const [showCTA, setShowCTA] = useState(false)
   
-  const typingPhrases = [
-    "English is the final programming language.",
-    "Cogent implements its potential.",
-    "Welcome to the world of forms."
-  ]
-
-  return (
-    <section className="py-20 lg:py-32 relative overflow-hidden min-h-screen">
-      <div className="container mx-auto text-center px-4">
+    <section className="relative overflow-hidden min-h-screen flex items-center justify-center">
+      <div className="container mx-auto text-center px-4 mt-32">
         <div className="mb-8 h-20 flex items-center justify-center">
           <TypingAnimation 
             phrases={typingPhrases}
