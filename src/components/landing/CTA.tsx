@@ -48,8 +48,7 @@ export default function CTA() {
             </Card>
           </div>
         </div>
+      </div>
     </section>
-  )
-}
   )
 }

@@ -9,9 +9,10 @@ export default function TypingAnimation({ phrases, className = '' }: TypingAnima
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0)
   const [currentText, setCurrentText] = useState('')
   const [isTyping, setIsTyping] = useState(true)
+  const [isComplete, setIsComplete] = useState(false)
 
   useEffect(() => {
-    if (currentPhraseIndex >= phrases.length) return
+    if (isComplete || currentPhraseIndex >= phrases.length) return
 
     const currentPhrase = phrases[currentPhraseIndex]
     
@@ -29,6 +30,9 @@ export default function TypingAnimation({ phrases, className = '' }: TypingAnima
             setIsTyping(false)
           }, 1000)
           return () => clearTimeout(timeout)
+        } else {
+          // Finished all phrases
+          setIsComplete(true)
         }
       }
     } else {
@@ -44,12 +48,12 @@ export default function TypingAnimation({ phrases, className = '' }: TypingAnima
         setIsTyping(true)
       }
     }
-  }, [currentText, currentPhraseIndex, isTyping, phrases])
+  }, [currentText, currentPhraseIndex, isTyping, phrases, isComplete])
 
   return (
     <span className={className}>
       {currentText}
-      <span className="animate-pulse">|</span>
+      {!isComplete && <span className="animate-pulse">|</span>}
     </span>
   )
 }

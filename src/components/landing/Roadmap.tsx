@@ -45,7 +45,7 @@ export default function Roadmap() {
   ]
 
   return (
-    <section className="py-20 bg-secondary/30">
+    <section className="py-20 bg-zinc-50 dark:bg-zinc-900/50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">

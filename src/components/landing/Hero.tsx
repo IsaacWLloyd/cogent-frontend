@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Card, CardContent } from "@/components/ui/card"
 import TypingAnimation from "@/components/ui/typing-animation"
 
 export default function Hero() {
@@ -27,25 +28,29 @@ export default function Hero() {
         
         {/* CTA Section */}
         <div className="max-w-md mx-auto space-y-4">
-          <div className="bg-card border border-border rounded-lg p-6">
-            <h3 className="font-lora font-semibold mb-4 text-foreground">Join the Waitlist</h3>
-            <div className="space-y-3">
-              <Input 
-                type="email" 
-                placeholder="Enter your email"
-                className="w-full"
-              />
-              <Button className="w-full bg-blue-950 hover:bg-blue-900 text-white">
-                Join Waitlist
+          <Card className="bg-card border border-border">
+            <CardContent className="p-6">
+              <h3 className="font-lora font-semibold mb-4 text-foreground">Join the Waitlist</h3>
+              <div className="space-y-3">
+                <Input 
+                  type="email" 
+                  placeholder="Enter your email"
+                  className="w-full"
+                />
+                <Button className="w-full bg-blue-950 hover:bg-blue-900 text-white">
+                  Join Waitlist
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="bg-card border border-border">
+            <CardContent className="p-4">
+              <p className="text-sm text-muted-foreground mb-3">Join our Discord community</p>
+              <Button variant="outline" className="w-full">
+                Discord (Coming Soon)
               </Button>
-            </div>
-          </div>
-          <div className="bg-card border border-border rounded-lg p-4">
-            <p className="text-sm text-muted-foreground mb-3">Join our Discord community</p>
-            <Button variant="outline" className="w-full">
-              Discord (Coming Soon)
-            </Button>
-          </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
