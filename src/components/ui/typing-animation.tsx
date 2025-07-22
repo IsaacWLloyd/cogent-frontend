@@ -97,7 +97,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
           tempElement.textContent = currentText
           
           document.body.appendChild(tempElement)
-          const width = tempElement.offsetWidth + (currentPhraseIndex === 0 ? 32 : currentPhraseIndex === 1 ? 64 : 56) // Different padding per phrase
+          const width = tempElement.offsetWidth + (currentPhraseIndex === 0 ? 36 : currentPhraseIndex === 1 ? 72 : 64) // Different padding per phrase
           document.body.removeChild(tempElement)
           
           setBackgroundWidth(width)
