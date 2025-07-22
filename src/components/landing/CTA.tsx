@@ -1,9 +1,12 @@
+import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import TypingAnimation from "@/components/ui/typing-animation"
 
 export default function CTA() {
+  const [showCTA, setShowCTA] = useState(false)
+  
   const typingPhrases = [
     "English is the final programming language.",
     "Cogent implements its potential.", 
@@ -18,10 +21,13 @@ export default function CTA() {
             <TypingAnimation 
               phrases={typingPhrases}
               className="text-2xl lg:text-3xl font-kode font-medium text-foreground"
+              onComplete={() => setShowCTA(true)}
             />
           </div>
           
-          <div className="space-y-6">
+          <div className={`space-y-6 transition-all duration-1000 ${
+            showCTA ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
             <Card className="bg-card border-border">
               <CardContent className="p-8">
                 <h3 className="font-lora font-semibold mb-6 text-foreground text-xl">Join the Waitlist</h3>

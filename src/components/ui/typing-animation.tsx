@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react'
 interface TypingAnimationProps {
   phrases: string[]
   className?: string
+  onComplete?: () => void
 }
 
-export default function TypingAnimation({ phrases, className = '' }: TypingAnimationProps) {
+export default function TypingAnimation({ phrases, className = '', onComplete }: TypingAnimationProps) {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0)
   const [currentText, setCurrentText] = useState('')
   const [isTyping, setIsTyping] = useState(true)
@@ -33,6 +34,7 @@ export default function TypingAnimation({ phrases, className = '' }: TypingAnima
         } else {
           // Finished all phrases
           setIsComplete(true)
+          onComplete?.()
         }
       }
     } else {

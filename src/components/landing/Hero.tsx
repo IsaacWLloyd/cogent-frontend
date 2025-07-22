@@ -1,9 +1,12 @@
+import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import TypingAnimation from "@/components/ui/typing-animation"
 
 export default function Hero() {
+  const [showCTA, setShowCTA] = useState(false)
+  
   const typingPhrases = [
     "English is the final programming language.",
     "Cogent implements its potential.",
@@ -17,17 +20,17 @@ export default function Hero() {
           <TypingAnimation 
             phrases={typingPhrases}
             className="text-3xl lg:text-5xl font-kode font-medium text-foreground"
+            onComplete={() => setShowCTA(true)}
           />
         </div>
         <h1 className="text-4xl lg:text-6xl font-lora font-bold mb-6 text-foreground">
           COGENT
         </h1>
-        <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto font-lora">
-          Code Organization and Generation Enhancement Tool
-        </p>
         
         {/* CTA Section */}
-        <div className="max-w-md mx-auto space-y-4">
+        <div className={`max-w-md mx-auto space-y-4 transition-all duration-1000 ${
+          showCTA ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
           <Card className="bg-card border border-border">
             <CardContent className="p-6">
               <h3 className="font-lora font-semibold mb-4 text-foreground">Join the Waitlist</h3>
