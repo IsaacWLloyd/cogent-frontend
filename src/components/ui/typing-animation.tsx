@@ -57,7 +57,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
           // Move to next phrase after a pause
           const timeout = setTimeout(() => {
             setIsTyping(false)
-          }, 500) // 50% faster (was 1000ms, now 500ms)
+          }, 2000) // Longer pause between phrases
           return () => clearTimeout(timeout)
         } else {
           // Finished all phrases

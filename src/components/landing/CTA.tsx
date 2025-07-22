@@ -8,8 +8,6 @@ export default function CTA() {
   const [showCTA, setShowCTA] = useState(false)
   
   const typingPhrases = [
-    "English is the final programming language.",
-    "Cogent implements its potential.", 
     "Don't get left behind."
   ]
 
