@@ -18,7 +18,7 @@ export default function Hero() {
           <div className="mb-8 h-20 flex items-center justify-center">
             <TypingAnimation 
               phrases={typingPhrases}
-              className="text-3xl lg:text-5xl font-kode font-medium text-foreground"
+              className="text-2xl lg:text-4xl font-kode font-medium text-foreground"
               onComplete={() => setShowCTA(true)}
             />
           </div>
