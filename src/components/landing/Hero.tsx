@@ -1,24 +1,51 @@
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import TypingAnimation from "@/components/ui/typing-animation"
 
 export default function Hero() {
+  const typingPhrases = [
+    "English is the final programming language.",
+    "Cogent implements its potential.",
+    "Welcome to the world of forms."
+  ]
+
   return (
-    <section className="py-20 lg:py-32 bg-background">
+    <section className="py-20 lg:py-32 bg-background relative overflow-hidden">
       <div className="container mx-auto text-center px-4">
-        <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-foreground">
-          Code Organization and{" "}
-          <span className="text-primary">Generation Enhancement</span> Tool
+        <div className="mb-8 h-20 flex items-center justify-center">
+          <TypingAnimation 
+            phrases={typingPhrases}
+            className="text-3xl lg:text-5xl font-kode font-medium text-foreground"
+          />
+        </div>
+        <h1 className="text-4xl lg:text-6xl font-lora font-bold mb-6 text-foreground">
+          COGENT
         </h1>
-        <p className="text-lg lg:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-          COGENT forces Claude Code to generate and maintain comprehensive documentation for every code file, 
-          ensuring your codebase remains well-documented and understandable.
+        <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto font-lora">
+          Code Organization and Generation Enhancement Tool
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="text-base">
-            Get Started
-          </Button>
-          <Button variant="outline" size="lg" className="text-base">
-            View Documentation
-          </Button>
+        
+        {/* CTA Section */}
+        <div className="max-w-md mx-auto space-y-4">
+          <div className="bg-card border border-border rounded-lg p-6">
+            <h3 className="font-lora font-semibold mb-4 text-foreground">Join the Waitlist</h3>
+            <div className="space-y-3">
+              <Input 
+                type="email" 
+                placeholder="Enter your email"
+                className="w-full"
+              />
+              <Button className="w-full bg-blue-950 hover:bg-blue-900 text-white">
+                Join Waitlist
+              </Button>
+            </div>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-4">
+            <p className="text-sm text-muted-foreground mb-3">Join our Discord community</p>
+            <Button variant="outline" className="w-full">
+              Discord (Coming Soon)
+            </Button>
+          </div>
         </div>
       </div>
     </section>
