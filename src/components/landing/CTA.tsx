@@ -27,14 +27,14 @@ export default function CTA() {
           <div className={`space-y-6 transition-all duration-1000 ${
             showCTA ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-            <Card className="bg-cogent-dark border border-gray-700">
-              <CardContent className="p-8">
-                <h3 className="font-lora font-semibold mb-6 text-white text-xl">Join the Waitlist</h3>
+            <Card className="bg-zinc-800 border border-zinc-600">
+              <CardContent className="p-6">
+                <h3 className="font-lora font-semibold mb-4 text-zinc-100">Join the Waitlist</h3>
                 <div className="space-y-4">
                   <Input 
                     type="email" 
                     placeholder="Enter your email"
-                    className="w-full bg-zinc-600 text-zinc-100"
+                    className="w-full bg-zinc-600 text-zinc-100 border-zinc-500"
                   />
                   <Button className="w-full bg-cogent-yellow hover:bg-cogent-yellow/90 text-cogent-dark font-medium">
                     Join Waitlist
@@ -43,9 +43,9 @@ export default function CTA() {
               </CardContent>
             </Card>
             
-            <Card className="bg-cogent-dark border border-gray-700">
-              <CardContent className="p-6">
-                <p className="text-gray-300 mb-4">Join our Discord community</p>
+            <Card className="bg-zinc-800 border border-zinc-600">
+              <CardContent className="p-4">
+                <p className="text-sm text-zinc-300 mb-3">Join our Discord community</p>
                 <Button variant="outline" className="w-full bg-zinc-600 text-zinc-100 border-zinc-500 hover:bg-zinc-500">
                   Discord (Coming Soon)
                 </Button>
