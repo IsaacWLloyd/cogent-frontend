@@ -3,23 +3,22 @@ import TypingAnimation from "@/components/ui/typing-animation"
 import CTA from "./CTA"
 
 const typingPhrases = [
-  "English is the final programming language.",
-  "Cogent implements its potential.",
-  "Welcome to the world of forms."
+  "Don't get left behind."
 ]
 
-export default function Hero() {
+export default function BottomHero() {
   const [showCTA, setShowCTA] = useState(false)
   
   return (
-    <section className="min-h-screen flex items-center justify-center">
+    <section className="py-20 min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center mt-32">
-          <div className="mb-8 h-20 flex items-center justify-center">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="mb-8 h-16 flex items-center justify-center">
             <TypingAnimation 
               phrases={typingPhrases}
-              className="text-3xl lg:text-5xl font-kode font-medium text-foreground"
+              className="text-2xl lg:text-3xl font-kode font-medium text-foreground"
               onComplete={() => setShowCTA(true)}
+              triggerOnScroll={true}
             />
           </div>
           

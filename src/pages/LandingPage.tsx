@@ -2,7 +2,7 @@ import Hero from '../components/landing/Hero'
 import QuickPitch from '../components/landing/QuickPitch'
 import VisualExplainer from '../components/landing/VisualExplainer'
 import Roadmap from '../components/landing/Roadmap'
-import CTA from '../components/landing/CTA'
+import BottomHero from '../components/landing/BottomHero'
 
 export default function LandingPage() {
   return (
@@ -11,7 +11,7 @@ export default function LandingPage() {
       <QuickPitch />
       <VisualExplainer />
       <Roadmap />
-      <CTA />
+      <BottomHero />
     </main>
   )
 }
