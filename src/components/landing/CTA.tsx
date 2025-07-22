@@ -28,25 +28,26 @@ export default function CTA() {
             showCTA ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <Card className="bg-card border-border">
+            <Card className="bg-cogent-dark border-border">
               <CardContent className="p-8">
-                <h3 className="font-lora font-semibold mb-6 text-foreground text-xl">Join the Waitlist</h3>
+                <h3 className="font-lora font-semibold mb-6 text-white text-xl">Join the Waitlist</h3>
                 <div className="space-y-4">
                   <Input 
                     type="email" 
                     placeholder="Enter your email"
-                    className="w-full"
+                    className="w-full bg-white text-cogent-dark"
                   />
-                  <Button className="w-full bg-blue-950 hover:bg-blue-900 text-white">
+                  <Button className="w-full bg-cogent-yellow hover:bg-cogent-yellow/90 text-cogent-dark font-medium">
                     Join Waitlist
                   </Button>
                 </div>
               </CardContent>
             </Card>
             
-            <Card className="bg-card border-border">
+            <Card className="bg-cogent-dark border-border">
               <CardContent className="p-6">
-                <p className="text-muted-foreground mb-4">Join our Discord community</p>
-                <Button variant="outline" className="w-full">
+                <p className="text-gray-300 mb-4">Join our Discord community</p>
+                <Button variant="outline" className="w-full bg-white text-cogent-dark border-white hover:bg-gray-100">
                   Discord (Coming Soon)
                 </Button>
               </CardContent>

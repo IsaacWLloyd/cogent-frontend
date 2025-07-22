@@ -37,15 +37,16 @@ export default function Hero() {
                     className="w-full"
                   />
                   <Button className="w-full bg-blue-950 hover:bg-blue-900 text-white">
+                  <Button className="w-full bg-cogent-yellow hover:bg-cogent-yellow/90 text-cogent-dark font-medium">
                     Join Waitlist
                   </Button>
                 </div>
               </CardContent>
             </Card>
-            <Card className="bg-card border border-border">
+            <Card className="bg-cogent-dark border border-border">
               <CardContent className="p-4">
-                <p className="text-sm text-muted-foreground mb-3">Join our Discord community</p>
-                <Button variant="outline" className="w-full">
+                <p className="text-sm text-gray-300 mb-3">Join our Discord community</p>
+                <Button variant="outline" className="w-full bg-white text-cogent-dark border-white hover:bg-gray-100">
                   Discord (Coming Soon)
                 </Button>
               </CardContent>
