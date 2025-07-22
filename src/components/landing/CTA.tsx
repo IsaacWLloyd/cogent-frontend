@@ -22,6 +22,7 @@ export default function CTA() {
               phrases={typingPhrases}
               className="text-2xl lg:text-3xl font-kode font-medium text-foreground"
               onComplete={() => setShowCTA(true)}
+              triggerOnScroll={true}
             />
           </div>
           
