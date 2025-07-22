@@ -4,7 +4,13 @@ import LandingPage from './pages/LandingPage'
 
 function App() {
   return (
-    <div className="dark min-h-screen bg-background text-foreground">
+    <div className="dark min-h-screen text-foreground relative">
+      {/* Full-page background image */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10"
+        style={{ backgroundImage: 'url(/cogent-hero-no-watermark.png)' }}
+      />
+      
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />

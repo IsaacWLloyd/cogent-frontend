@@ -12,7 +12,7 @@ export default function CTA() {
   ]
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
           <div className="mb-8 h-16 flex items-center justify-center">
