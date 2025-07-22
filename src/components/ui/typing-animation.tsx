@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 
 // Padding constants for background width calculation
-const FIRST_PHRASE_PADDING = 32
-const SECOND_PHRASE_PADDING = 64
-const THIRD_PHRASE_PADDING = 56
+const FIRST_PHRASE_PADDING = 64
+const SECOND_PHRASE_PADDING = 128
+const THIRD_PHRASE_PADDING = 116
 
 interface TypingAnimationProps {
   phrases: string[]
