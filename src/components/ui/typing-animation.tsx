@@ -97,7 +97,11 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
           tempElement.textContent = currentText
           
           document.body.appendChild(tempElement)
-          const width = tempElement.offsetWidth + 28 // Add more padding for better fit
+          let padding = 32 // Default padding
+          if (currentPhraseIndex === 0) padding = 32 // First phrase needs a bit more
+          else if (currentPhraseIndex === 1) padding = 80 // Second phrase needs a lot more
+          else if (currentPhraseIndex === 2) padding = 60 // Third phrase needs moderate amount more
+          const width = tempElement.offsetWidth + padding
           document.body.removeChild(tempElement)
           
           setBackgroundWidth(width)
@@ -112,7 +116,11 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
       tempElement.className = className
       tempElement.textContent = currentText
       
-      document.body.appendChild(tempElement)
+          let padding = 48 // Default padding
+          if (currentPhraseIndex === 0) padding = 32 // First phrase needs a bit more
+          else if (currentPhraseIndex === 1) padding = 80 // Second phrase needs a lot more
+          else if (currentPhraseIndex === 2) padding = 60 // Third phrase needs moderate amount more
+          const width = tempElement.offsetWidth + padding
       const width = tempElement.offsetWidth + 48 // Add more padding for better fit
       document.body.removeChild(tempElement)
       
@@ -139,7 +147,11 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
           const timeout = setTimeout(() => {
             setIsTyping(false)
           }, 2000) // Longer pause between phrases
-          return () => clearTimeout(timeout)
+            let padding = 32 // Default padding
+            if (currentPhraseIndex === 0) padding = 32 // First phrase needs a bit more
+            else if (currentPhraseIndex === 1) padding = 80 // Second phrase needs a lot more
+            else if (currentPhraseIndex === 2) padding = 60 // Third phrase needs moderate amount more
+            const width = tempElement.offsetWidth + padding
         } else {
           // Finished all phrases
           setIsComplete(true)
@@ -163,7 +175,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
   }, [currentText, currentPhraseIndex, isTyping, phrases, isComplete, hasStarted])
 
   return (
-    <span className={`relative ${className}`} id={triggerOnScroll ? 'typing-animation-trigger' : undefined}>
+        const width = tempElement.offsetWidth + 48 // Add padding for better fit
       <span 
         className="absolute inset-0 bg-black transition-all duration-75 ease-out"
         style={{ 
