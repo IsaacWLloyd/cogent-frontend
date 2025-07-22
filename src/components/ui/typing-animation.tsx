@@ -174,7 +174,10 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
   }, [currentText, currentPhraseIndex, isTyping, phrases, isComplete, hasStarted])
 
   return (
-        const width = tempElement.offsetWidth + 48 // Add padding for better fit
+    <span 
+      id={triggerOnScroll ? 'typing-animation-trigger' : undefined}
+      className="relative inline-block"
+    >
       <span 
         className="absolute inset-0 bg-black transition-all duration-75 ease-out"
         style={{ 
@@ -187,5 +190,6 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
         {!isComplete && hasStarted && <span className="animate-pulse">|</span>}
       </span>
     </span>
+  )
   )
 }
