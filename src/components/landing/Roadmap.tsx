@@ -54,6 +54,7 @@ export default function Roadmap() {
               <div className="inline-block bg-card border border-gray-700 rounded-lg px-4 py-2 mb-8">
                 <span className="font-kode font-medium text-foreground">INIT</span>
               </div>
+              </div>
               <h2 className="text-3xl lg:text-4xl font-lora font-bold text-foreground">
                 Roadmap
               </h2>
