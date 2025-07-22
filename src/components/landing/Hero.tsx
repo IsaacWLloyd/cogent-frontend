@@ -37,6 +37,7 @@ export default function Hero() {
                     className="w-full"
                   />
                   <Button className="w-full bg-blue-950 hover:bg-blue-900 text-white">
+                  </Button>
                   <Button className="w-full bg-cogent-yellow hover:bg-cogent-yellow/90 text-cogent-dark font-medium">
                     Join Waitlist
                   </Button>
