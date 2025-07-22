@@ -63,7 +63,7 @@ export default function Roadmap() {
               <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-border"></div>
               
               {/* Progress line (solid for completed items) */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-amber-200" 
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-cogent-yellow" 
                    style={{ height: '20%' }}></div>
 
               <div className="space-y-16">
