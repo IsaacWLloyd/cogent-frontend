@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react'
 
+// Padding constants for background width calculation
+const FIRST_PHRASE_PADDING = 32
+const SECOND_PHRASE_PADDING = 64
+const THIRD_PHRASE_PADDING = 56
+
 interface TypingAnimationProps {
   phrases: string[]
   className?: string
@@ -78,7 +83,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
         tempElement.textContent = firstLine
         
         document.body.appendChild(tempElement)
-        const width = tempElement.offsetWidth + (currentPhraseIndex === 0 ? 48 : currentPhraseIndex === 1 ? 72 : 64) // Different padding per phrase
+        const width = tempElement.offsetWidth + (currentPhraseIndex === 0 ? FIRST_PHRASE_PADDING : currentPhraseIndex === 1 ? SECOND_PHRASE_PADDING : THIRD_PHRASE_PADDING)
         document.body.removeChild(tempElement)
         
         setBackgroundWidth(width)
@@ -97,7 +102,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
           tempElement.textContent = currentText
           
           document.body.appendChild(tempElement)
-          const width = tempElement.offsetWidth + (currentPhraseIndex === 0 ? 48 : currentPhraseIndex === 1 ? 72 : 64) // Different padding per phrase
+          const width = tempElement.offsetWidth + (currentPhraseIndex === 0 ? FIRST_PHRASE_PADDING : currentPhraseIndex === 1 ? SECOND_PHRASE_PADDING : THIRD_PHRASE_PADDING)
           document.body.removeChild(tempElement)
           
           setBackgroundWidth(width)
@@ -113,7 +118,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
       tempElement.textContent = currentText
       
       document.body.appendChild(tempElement)
-      const width = tempElement.offsetWidth + (currentPhraseIndex === 0 ? 48 : currentPhraseIndex === 1 ? 72 : 64) // Different padding per phrase
+      const width = tempElement.offsetWidth + (currentPhraseIndex === 0 ? FIRST_PHRASE_PADDING : currentPhraseIndex === 1 ? SECOND_PHRASE_PADDING : THIRD_PHRASE_PADDING)
       document.body.removeChild(tempElement)
       
       setBackgroundWidth(width)
