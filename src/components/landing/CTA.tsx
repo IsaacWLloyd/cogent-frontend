@@ -48,10 +48,6 @@ export default function CTA() {
             </Card>
           </div>
         </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
     </section>
   )
 }
