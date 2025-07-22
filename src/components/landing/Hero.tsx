@@ -7,6 +7,7 @@ import TypingAnimation from "@/components/ui/typing-animation"
 export default function Hero() {
   const [showCTA, setShowCTA] = useState(false)
   
+  return (
     <section className="relative overflow-hidden min-h-screen flex items-center justify-center">
       <div className="container mx-auto text-center px-4 mt-32">
         <div className="mb-8 h-20 flex items-center justify-center">
