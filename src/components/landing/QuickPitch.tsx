@@ -13,7 +13,6 @@ export default function QuickPitch() {
               Coding Agents lose context and drift from specifications. Your vision gets lost in translation.
             </p>
             
-            <Card className="bg-card border-border mb-8">
             <Card className="bg-card border border-gray-700 mb-8">
               <CardContent className="p-8">
                 <div className="flex items-center justify-center mb-6">
@@ -41,7 +40,5 @@ export default function QuickPitch() {
         </div>
       </div>
     </section>
-  )
-}
   )
 }
