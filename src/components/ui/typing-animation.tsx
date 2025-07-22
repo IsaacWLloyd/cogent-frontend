@@ -116,6 +116,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
       tempElement.className = className
       tempElement.textContent = currentText
       
+      document.body.appendChild(tempElement)
           let padding = 48 // Default padding
           if (currentPhraseIndex === 0) padding = 32 // First phrase needs a bit more
           else if (currentPhraseIndex === 1) padding = 80 // Second phrase needs a lot more
@@ -146,11 +147,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
           const timeout = setTimeout(() => {
             setIsTyping(false)
           }, 2000) // Longer pause between phrases
-            let padding = 32 // Default padding
-            if (currentPhraseIndex === 0) padding = 32 // First phrase needs a bit more
-            else if (currentPhraseIndex === 1) padding = 80 // Second phrase needs a lot more
-            else if (currentPhraseIndex === 2) padding = 60 // Third phrase needs moderate amount more
-            const width = tempElement.offsetWidth + padding
+          return () => clearTimeout(timeout)
         } else {
           // Finished all phrases
           setIsComplete(true)
@@ -190,6 +187,5 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
         {!isComplete && hasStarted && <span className="animate-pulse">|</span>}
       </span>
     </span>
-  )
   )
 }
