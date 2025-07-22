@@ -51,6 +51,7 @@ export default function Roadmap() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-block bg-card border border-border rounded-lg px-4 py-2 mb-8">
+              <div className="inline-block bg-card border border-gray-700 rounded-lg px-4 py-2 mb-8">
                 <span className="font-kode font-medium text-foreground">INIT</span>
               </div>
               <h2 className="text-3xl lg:text-4xl font-lora font-bold text-foreground">
@@ -60,6 +61,7 @@ export default function Roadmap() {
 
             <div className="relative">
               <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-border"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-700"></div>
               
               <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-cogent-yellow" 
                    style={{ height: '20%' }}></div>
@@ -68,10 +70,11 @@ export default function Roadmap() {
                 {roadmapItems.map((item, index) => (
                   <div key={item.id} className={`relative flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-background border-2 border-border rounded-full z-10"></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-background border-2 border-gray-700 rounded-full z-10"></div>
                     
                     <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
                       <Card 
-                        className="bg-card border-border cursor-pointer transition-all duration-200 hover:shadow-lg"
+                        className="bg-card border border-gray-700 cursor-pointer transition-all duration-200 hover:shadow-lg"
                         onMouseEnter={() => setHoveredItem(item.id)}
                         onMouseLeave={() => setHoveredItem(null)}
                       >

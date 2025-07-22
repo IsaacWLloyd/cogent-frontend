@@ -13,7 +13,7 @@ export default function VisualExplainer() {
             
             <div className="grid lg:grid-cols-2 gap-12 mb-16">
               {/* Step 1 */}
-              <Card className="bg-card border-border">
+              <Card className="bg-card border border-gray-700">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     <span className="text-2xl font-kode font-bold text-amber-200 mr-4">01.</span>
@@ -54,7 +54,7 @@ export default function VisualExplainer() {
               </Card>
 
               {/* Step 2 */}
-              <Card className="bg-card border-border">
+              <Card className="bg-card border border-gray-700">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     <span className="text-2xl font-kode font-bold text-amber-200 mr-4">02.</span>
@@ -94,7 +94,7 @@ export default function VisualExplainer() {
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Step 3 */}
-              <Card className="bg-card border-border">
+              <Card className="bg-card border border-gray-700">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     <span className="text-2xl font-kode font-bold text-amber-200 mr-4">03.</span>
@@ -123,7 +123,7 @@ export default function VisualExplainer() {
               </Card>
 
               {/* Step 4 */}
-              <Card className="bg-card border-border">
+              <Card className="bg-card border border-gray-700">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     <span className="text-2xl font-kode font-bold text-amber-200 mr-4">04.</span>

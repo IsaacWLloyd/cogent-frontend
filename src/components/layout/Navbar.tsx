@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 export default function Navbar() {
   return (
     <nav className="border-b border-border bg-cogent-dark backdrop-blur supports-[backdrop-filter]:bg-cogent-dark/95">
+    <nav className="border-b border-gray-700 bg-cogent-dark backdrop-blur supports-[backdrop-filter]:bg-cogent-dark/95">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <img 
@@ -21,5 +22,7 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
+  )
+}
   )
 }
