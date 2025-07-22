@@ -78,7 +78,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
         tempElement.textContent = firstLine
         
         document.body.appendChild(tempElement)
-        const width = tempElement.offsetWidth + 48 // Add more padding for better fit
+        const width = tempElement.offsetWidth + (currentPhraseIndex === 0 ? 32 : currentPhraseIndex === 1 ? 64 : 56) // Different padding per phrase
         document.body.removeChild(tempElement)
         
         setBackgroundWidth(width)
@@ -97,7 +97,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
           tempElement.textContent = currentText
           
           document.body.appendChild(tempElement)
-          const width = tempElement.offsetWidth + 28 // Add more padding for better fit
+          const width = tempElement.offsetWidth + (currentPhraseIndex === 0 ? 32 : currentPhraseIndex === 1 ? 64 : 56) // Different padding per phrase
           document.body.removeChild(tempElement)
           
           setBackgroundWidth(width)
@@ -113,7 +113,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
       tempElement.textContent = currentText
       
       document.body.appendChild(tempElement)
-      const width = tempElement.offsetWidth + 48 // Add more padding for better fit
+      const width = tempElement.offsetWidth + (currentPhraseIndex === 0 ? 32 : currentPhraseIndex === 1 ? 64 : 56) // Different padding per phrase
       document.body.removeChild(tempElement)
       
       setBackgroundWidth(width)
