@@ -1,14 +1,31 @@
+import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show navbar when scrolled down more than 100px
+      setIsVisible(window.scrollY > 100)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <nav className="border-b border-gray-700 bg-cogent-dark backdrop-blur supports-[backdrop-filter]:bg-cogent-dark/95">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isVisible 
+        ? 'translate-y-0 opacity-100 bg-cogent-dark/95 backdrop-blur-sm border-b border-gray-700' 
+        : '-translate-y-full opacity-0'
+    }`}>
+      <div className="w-full px-8 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <img 
             src="/cogent-full.png" 
             alt="COGENT" 
-            className="h-8 w-auto"
+            className="h-12 w-auto"
           />
         </div>
         <div className="flex items-center gap-4">

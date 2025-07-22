@@ -4,7 +4,7 @@ import LandingPage from './pages/LandingPage'
 
 function App() {
   return (
-    <div className="dark min-h-screen text-foreground relative">
+    <div className="dark min-h-screen text-foreground">
       {/* Full-page background image */}
       <div 
         className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10"
