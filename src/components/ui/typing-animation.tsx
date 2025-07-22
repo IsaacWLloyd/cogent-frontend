@@ -48,8 +48,8 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
     
     const currentPhrase = phrases[currentPhraseIndex]
     
-    // Check if we're on the first phrase and if it contains line breaks
-    if (currentPhraseIndex === 0 && currentPhrase.includes('\n')) {
+    // Check if current phrase contains line breaks
+    if (currentPhrase.includes('\n')) {
       const lines = currentPhrase.split('\n')
       const firstLine = lines[0]
       
@@ -63,7 +63,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
         tempElement.textContent = currentText
         
         document.body.appendChild(tempElement)
-        const width = tempElement.offsetWidth
+        const width = tempElement.offsetWidth + 8 // Add padding for better fit
         document.body.removeChild(tempElement)
         
         setBackgroundWidth(width)
@@ -78,7 +78,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
         tempElement.textContent = firstLine
         
         document.body.appendChild(tempElement)
-        const width = tempElement.offsetWidth
+        const width = tempElement.offsetWidth + 8 // Add padding for better fit
         document.body.removeChild(tempElement)
         
         setBackgroundWidth(width)
@@ -97,7 +97,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
           tempElement.textContent = currentText
           
           document.body.appendChild(tempElement)
-          const width = tempElement.offsetWidth
+          const width = tempElement.offsetWidth + 8 // Add padding for better fit
           document.body.removeChild(tempElement)
           
           setBackgroundWidth(width)
@@ -113,7 +113,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
       tempElement.textContent = currentText
       
       document.body.appendChild(tempElement)
-      const width = tempElement.offsetWidth
+      const width = tempElement.offsetWidth + 8 // Add padding for better fit
       document.body.removeChild(tempElement)
       
       setBackgroundWidth(width)

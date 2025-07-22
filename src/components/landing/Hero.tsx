@@ -5,7 +5,7 @@ import CTA from "./CTA"
 const typingPhrases = [
   "English is the final\nprogramming language.",
   "Cogent implements\nits potential.",
-  "Welcome to the world of forms."
+  "Welcome to the world\nof forms."
 ]
 
 export default function Hero() {
