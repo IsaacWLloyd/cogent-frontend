@@ -14,6 +14,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
   const [isComplete, setIsComplete] = useState(false)
   const [hasStarted, setHasStarted] = useState(!triggerOnScroll)
   const [backgroundWidth, setBackgroundWidth] = useState(0)
+  const [isFirstLineComplete, setIsFirstLineComplete] = useState(false)
 
   useEffect(() => {
     if (!triggerOnScroll) return
@@ -45,19 +46,79 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
   useEffect(() => {
     if (!hasStarted) return
     
-    // Create a temporary element to measure text width
-    const tempElement = document.createElement('span')
-    tempElement.style.visibility = 'hidden'
-    tempElement.style.position = 'absolute'
-    tempElement.style.whiteSpace = 'nowrap'
-    tempElement.className = className
-    tempElement.textContent = currentText
+    const currentPhrase = phrases[currentPhraseIndex]
     
-    document.body.appendChild(tempElement)
-    const width = tempElement.offsetWidth
-    document.body.removeChild(tempElement)
-    
-    setBackgroundWidth(width)
+    // Check if we're on the first phrase and if it contains line breaks
+    if (currentPhraseIndex === 0 && currentPhrase.includes('\n')) {
+      const lines = currentPhrase.split('\n')
+      const firstLine = lines[0]
+      
+      // If we haven't completed the first line yet, measure current text
+      if (currentText.length <= firstLine.length) {
+        const tempElement = document.createElement('span')
+        tempElement.style.visibility = 'hidden'
+        tempElement.style.position = 'absolute'
+        tempElement.style.whiteSpace = 'nowrap'
+        tempElement.className = className
+        tempElement.textContent = currentText
+        
+        document.body.appendChild(tempElement)
+        const width = tempElement.offsetWidth
+        document.body.removeChild(tempElement)
+        
+        setBackgroundWidth(width)
+        setIsFirstLineComplete(false)
+      } else if (!isFirstLineComplete) {
+        // First line is complete, measure just the first line
+        const tempElement = document.createElement('span')
+        tempElement.style.visibility = 'hidden'
+        tempElement.style.position = 'absolute'
+        tempElement.style.whiteSpace = 'nowrap'
+        tempElement.className = className
+        tempElement.textContent = firstLine
+        
+        document.body.appendChild(tempElement)
+        const width = tempElement.offsetWidth
+        document.body.removeChild(tempElement)
+        
+        setBackgroundWidth(width)
+        setIsFirstLineComplete(true)
+      }
+      // If first line is complete and we're deleting, only start shrinking after second line is gone
+      else if (isFirstLineComplete && !isTyping) {
+        const secondLineStart = firstLine.length + 1 // +1 for the newline
+        if (currentText.length <= secondLineStart) {
+          // Now we can start shrinking the background
+          const tempElement = document.createElement('span')
+          tempElement.style.visibility = 'hidden'
+          tempElement.style.position = 'absolute'
+          tempElement.style.whiteSpace = 'nowrap'
+          tempElement.className = className
+          tempElement.textContent = currentText
+          
+          document.body.appendChild(tempElement)
+          const width = tempElement.offsetWidth
+          document.body.removeChild(tempElement)
+          
+          setBackgroundWidth(width)
+        }
+      }
+    } else {
+      // For single line text or other phrases, use normal behavior
+      const tempElement = document.createElement('span')
+      tempElement.style.visibility = 'hidden'
+      tempElement.style.position = 'absolute'
+      tempElement.style.whiteSpace = 'nowrap'
+      tempElement.className = className
+      tempElement.textContent = currentText
+      
+      document.body.appendChild(tempElement)
+      const width = tempElement.offsetWidth
+      document.body.removeChild(tempElement)
+      
+      setBackgroundWidth(width)
+      setIsFirstLineComplete(false)
+    }
   }, [currentText, className, hasStarted])
 
   useEffect(() => {
@@ -96,6 +157,7 @@ export default function TypingAnimation({ phrases, className = '', onComplete, t
         // Start next phrase
         setCurrentPhraseIndex(prev => prev + 1)
         setIsTyping(true)
+        setIsFirstLineComplete(false)
       }
     }
   }, [currentText, currentPhraseIndex, isTyping, phrases, isComplete, hasStarted])

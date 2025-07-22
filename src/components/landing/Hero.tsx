@@ -3,8 +3,8 @@ import TypingAnimation from "@/components/ui/typing-animation"
 import CTA from "./CTA"
 
 const typingPhrases = [
-  "English is the final programming language.",
-  "Cogent implements its potential.",
+  "English is the final\nprogramming language.",
+  "Cogent implements\nits potential.",
   "Welcome to the world of forms."
 ]
 
