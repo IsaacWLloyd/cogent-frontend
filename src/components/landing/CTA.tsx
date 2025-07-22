@@ -34,7 +34,7 @@ export default function CTA() {
                   <Input 
                     type="email" 
                     placeholder="Enter your email"
-                    className="w-full bg-white text-cogent-dark"
+                    className="w-full bg-zinc-300 text-zinc-900"
                   />
                   <Button className="w-full bg-cogent-yellow hover:bg-cogent-yellow/90 text-cogent-dark font-medium">
                     Join Waitlist
@@ -46,7 +46,7 @@ export default function CTA() {
             <Card className="bg-cogent-dark border border-gray-700">
               <CardContent className="p-6">
                 <p className="text-gray-300 mb-4">Join our Discord community</p>
-                <Button variant="outline" className="w-full bg-white text-cogent-dark border-white hover:bg-gray-100">
+                <Button variant="outline" className="w-full bg-zinc-300 text-zinc-900 border-zinc-400 hover:bg-zinc-400">
                   Discord (Coming Soon)
                 </Button>
               </CardContent>
