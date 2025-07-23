@@ -82,7 +82,7 @@ export default function QuickPitch() {
                         <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse delay-200"></div>
                       </div>
                       <div className="w-16 h-16 flex items-center justify-center">
-                        <img src="/cogent-full.png" alt="Cogent" className="w-full h-full object-contain" />
+                        <img src="/cogent-sun.png" alt="Cogent" className="w-full h-full object-contain" />
                       </div>
                       <div className="flex space-x-2">
                         <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
