@@ -84,31 +84,6 @@ export default function QuickPitch() {
                       <div className="w-64 h-64 flex items-center justify-center">
                         <img src="/cogent-sun.png" alt="Cogent" className="w-full h-full object-contain" />
                       </div>
-                      
-                      {/* Orchestration visualization */}
-                      <div className="absolute top-80 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-                        {/* Downward arrows */}
-                        <div className="flex space-x-8 mb-4">
-                          <div className="flex flex-col items-center">
-                            <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-l-transparent border-r-transparent border-t-yellow-500"></div>
-                            <div className="w-1 h-8 bg-yellow-500"></div>
-                          </div>
-                          <div className="flex flex-col items-center">
-                            <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-l-transparent border-r-transparent border-t-yellow-500"></div>
-                            <div className="w-1 h-8 bg-yellow-500"></div>
-                          </div>
-                        </div>
-                        
-                        {/* Half-sized Claude and Cursor logos */}
-                        <div className="flex space-x-16">
-                          <div className="w-32 h-32 rounded-lg bg-white flex items-center justify-center p-4">
-                            <img src="/claude.png" alt="Claude" className="w-full h-full object-contain" />
-                          </div>
-                          <div className="w-32 h-32 rounded-lg bg-white flex items-center justify-center p-4">
-                            <img src="/cursor.png" alt="Cursor" className="w-full h-full object-contain" />
-                          </div>
-                        </div>
-                      </div>
                       <div className="flex space-x-2">
                         <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse"></div>
                         <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse delay-100"></div>
@@ -121,6 +96,35 @@ export default function QuickPitch() {
                   </div>
                 </div>
               </CardContent>
+              
+              {/* Orchestration visualization - only show in phase 2 */}
+              {currentPhase === 1 && (
+                <CardContent className="pt-0 pb-8">
+                  <div className="flex flex-col items-center">
+                    {/* Downward arrows */}
+                    <div className="flex space-x-16 mb-4">
+                      <div className="flex flex-col items-center">
+                        <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-l-transparent border-r-transparent border-t-yellow-500"></div>
+                        <div className="w-1 h-8 bg-yellow-500"></div>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-l-transparent border-r-transparent border-t-yellow-500"></div>
+                        <div className="w-1 h-8 bg-yellow-500"></div>
+                      </div>
+                    </div>
+                    
+                    {/* Half-sized Claude and Cursor logos */}
+                    <div className="flex space-x-16">
+                      <div className="w-32 h-32 rounded-lg bg-white flex items-center justify-center p-4">
+                        <img src="/claude.png" alt="Claude" className="w-full h-full object-contain" />
+                      </div>
+                      <div className="w-32 h-32 rounded-lg bg-white flex items-center justify-center p-4">
+                        <img src="/cursor.png" alt="Cursor" className="w-full h-full object-contain" />
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              )}
             </Card>
             
             <p className="text-lg font-medium text-white">
