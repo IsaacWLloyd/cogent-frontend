@@ -100,16 +100,16 @@ export default function QuickPitch() {
               {/* Orchestration visualization - only show in phase 2 */}
               {currentPhase === 1 && (
                 <CardContent className="pt-0 pb-8">
-                  <div className="flex flex-col items-center">
+                  <div className={`flex flex-col items-center transition-opacity duration-1000 delay-1000 ${currentPhase === 1 ? 'opacity-100' : 'opacity-0'}`}>
                     {/* Downward arrows */}
-                    <div className="flex space-x-16 mb-4">
+                    <div className="flex space-x-16 mb-2">
                       <div className="flex flex-col items-center">
-                        <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-l-transparent border-r-transparent border-t-yellow-500"></div>
-                        <div className="w-1 h-8 bg-yellow-500"></div>
+                        <div className="w-1 h-12 bg-yellow-500"></div>
+                        <div className="w-0 h-0 border-l-6 border-r-6 border-t-12 border-l-transparent border-r-transparent border-t-yellow-500"></div>
                       </div>
                       <div className="flex flex-col items-center">
-                        <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-l-transparent border-r-transparent border-t-yellow-500"></div>
-                        <div className="w-1 h-8 bg-yellow-500"></div>
+                        <div className="w-1 h-12 bg-yellow-500"></div>
+                        <div className="w-0 h-0 border-l-6 border-r-6 border-t-12 border-l-transparent border-r-transparent border-t-yellow-500"></div>
                       </div>
                     </div>
                     
