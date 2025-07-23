@@ -64,67 +64,62 @@ export default function QuickPitch() {
                   
                   <div className={`transition-opacity duration-1000 ${currentPhase === 1 ? 'opacity-100' : 'opacity-0'} ${currentPhase === 0 ? 'absolute' : ''}`}>
                     {/* Phase 2: Lambo -> Cogent -> Lambo */}
-                    <div className="flex items-center space-x-16">
-                      <div className="relative w-64 h-64 flex items-center justify-center">
-                        {/* Thought bubble - larger and properly positioned */}
-                        <div className="relative">
-                          <div className="w-56 h-40 bg-white rounded-2xl flex items-center justify-center p-4">
-                            <img src="/lambo-removebg-preview.png" alt="Lambo" className="w-full h-full object-contain" />
+                    <div className="relative">
+                      <div className="flex items-center space-x-16">
+                        <div className="relative w-64 h-64 flex items-center justify-center">
+                          {/* Thought bubble - larger and properly positioned */}
+                          <div className="relative">
+                            <div className="w-56 h-40 bg-white rounded-2xl flex items-center justify-center p-4">
+                              <img src="/lambo-removebg-preview.png" alt="Lambo" className="w-full h-full object-contain" />
+                            </div>
+                            {/* Bubble tail */}
+                            <div className="absolute -bottom-4 left-8 w-12 h-12 bg-white rounded-full"></div>
+                            <div className="absolute -bottom-8 left-4 w-8 h-8 bg-white rounded-full"></div>
                           </div>
-                          {/* Bubble tail */}
-                          <div className="absolute -bottom-4 left-8 w-12 h-12 bg-white rounded-full"></div>
-                          <div className="absolute -bottom-8 left-4 w-8 h-8 bg-white rounded-full"></div>
                         </div>
-                      </div>
-                      <div className="flex space-x-2">
-                        <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse"></div>
-                        <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse delay-100"></div>
-                        <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse delay-200"></div>
-                      </div>
-                      <div className="w-64 h-64 flex items-center justify-center">
-                        <img src="/cogent-sun.png" alt="Cogent" className="w-full h-full object-contain" />
-                      </div>
-                      <div className="flex space-x-2">
-                        <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse"></div>
-                        <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse delay-100"></div>
-                        <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse delay-200"></div>
-                      </div>
-                      <div className="w-64 h-64 flex items-center justify-center">
-                        <img src="/lambo-removebg-preview.png" alt="Lambo" className="w-full h-full object-contain" />
+                        <div className="flex space-x-2">
+                          <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse"></div>
+                          <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse delay-100"></div>
+                          <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse delay-200"></div>
+                        </div>
+                        <div className="relative w-64 h-64 flex items-center justify-center">
+                          <img src="/cogent-sun.png" alt="Cogent" className="w-full h-full object-contain" />
+                          
+                          {/* Orchestration arrows - positioned to connect from bottom of Cogent logo */}
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 flex space-x-16 mt-1">
+                            <div className="flex flex-col items-center">
+                              <div className="w-1 h-8 bg-yellow-500"></div>
+                              <div className="w-0 h-0 border-l-6 border-r-6 border-t-8 border-l-transparent border-r-transparent border-t-yellow-500"></div>
+                            </div>
+                            <div className="flex flex-col items-center">
+                              <div className="w-1 h-8 bg-yellow-500"></div>
+                              <div className="w-0 h-0 border-l-6 border-r-6 border-t-8 border-l-transparent border-r-transparent border-t-yellow-500"></div>
+                            </div>
+                          </div>
+                          
+                          {/* Orchestrated tools - positioned directly below arrows */}
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 flex space-x-16 mt-10">
+                            <div className="w-32 h-32 rounded-lg bg-white flex items-center justify-center p-4">
+                              <img src="/claude.png" alt="Claude" className="w-full h-full object-contain" />
+                            </div>
+                            <div className="w-32 h-32 rounded-lg bg-white flex items-center justify-center p-4">
+                              <img src="/cursor.png" alt="Cursor" className="w-full h-full object-contain" />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex space-x-2">
+                          <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse"></div>
+                          <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse delay-100"></div>
+                          <div className="w-12 h-12 bg-green-500 rounded-full animate-pulse delay-200"></div>
+                        </div>
+                        <div className="w-64 h-64 flex items-center justify-center">
+                          <img src="/lambo-removebg-preview.png" alt="Lambo" className="w-full h-full object-contain" />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </CardContent>
-              
-              {/* Orchestration visualization - only show in phase 2 */}
-              {currentPhase === 1 && (
-                <CardContent className="pt-0 pb-8">
-                  <div className={`flex flex-col items-center transition-opacity duration-1000 delay-1000 ${currentPhase === 1 ? 'opacity-100' : 'opacity-0'}`}>
-                    {/* Downward arrows */}
-                    <div className="flex space-x-16 mb-2">
-                      <div className="flex flex-col items-center">
-                        <div className="w-1 h-12 bg-yellow-500"></div>
-                        <div className="w-0 h-0 border-l-6 border-r-6 border-t-12 border-l-transparent border-r-transparent border-t-yellow-500"></div>
-                      </div>
-                      <div className="flex flex-col items-center">
-                        <div className="w-1 h-12 bg-yellow-500"></div>
-                        <div className="w-0 h-0 border-l-6 border-r-6 border-t-12 border-l-transparent border-r-transparent border-t-yellow-500"></div>
-                      </div>
-                    </div>
-                    
-                    {/* Half-sized Claude and Cursor logos */}
-                    <div className="flex space-x-16">
-                      <div className="w-32 h-32 rounded-lg bg-white flex items-center justify-center p-4">
-                        <img src="/claude.png" alt="Claude" className="w-full h-full object-contain" />
-                      </div>
-                      <div className="w-32 h-32 rounded-lg bg-white flex items-center justify-center p-4">
-                        <img src="/cursor.png" alt="Cursor" className="w-full h-full object-contain" />
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              )}
             </Card>
             
             <p className="text-lg font-medium text-white">
