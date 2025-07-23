@@ -86,7 +86,7 @@ export default function QuickPitch() {
                       </div>
                       
                       {/* Orchestration visualization */}
-                      <div className="absolute top-72 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+                      <div className="absolute top-80 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
                         {/* Downward arrows */}
                         <div className="flex space-x-8 mb-4">
                           <div className="flex flex-col items-center">
@@ -100,7 +100,7 @@ export default function QuickPitch() {
                         </div>
                         
                         {/* Half-sized Claude and Cursor logos */}
-                        <div className="flex space-x-8">
+                        <div className="flex space-x-16">
                           <div className="w-32 h-32 rounded-lg bg-white flex items-center justify-center p-4">
                             <img src="/claude.png" alt="Claude" className="w-full h-full object-contain" />
                           </div>
