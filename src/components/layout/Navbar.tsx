@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isVisible 
-        ? 'translate-y-0 opacity-100 bg-black border-b border-gray-700' 
+        ? 'translate-y-0 opacity-100 bg-black border-b border-white' 
         : '-translate-y-full opacity-0'
     }`}>
       <div className="w-full px-8 py-4 flex items-center justify-between">
