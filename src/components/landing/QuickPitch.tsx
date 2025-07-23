@@ -28,13 +28,14 @@ export default function QuickPitch() {
                     {/* Phase 1: Lambo -> Claude/Cursor -> Sedan */}
                     <div className="flex items-center space-x-4">
                       <div className="relative w-16 h-16 flex items-center justify-center">
-                        {/* Thought bubble */}
-                        <div className="absolute -top-2 -right-2 w-8 h-6 bg-white rounded-full flex items-center justify-center">
-                          <div className="w-2 h-2 bg-white rounded-full absolute -bottom-1 -left-1"></div>
-                          <div className="w-1 h-1 bg-white rounded-full absolute -bottom-2 -left-2"></div>
-                        </div>
-                        <div className="w-12 h-8 bg-white rounded-lg flex items-center justify-center p-1">
-                          <img src="/lambo-removebg-preview.png" alt="Lambo" className="w-full h-full object-contain" />
+                        {/* Thought bubble - larger and properly positioned */}
+                        <div className="relative">
+                          <div className="w-14 h-10 bg-white rounded-2xl flex items-center justify-center p-1">
+                            <img src="/lambo-removebg-preview.png" alt="Lambo" className="w-full h-full object-contain" />
+                          </div>
+                          {/* Bubble tail */}
+                          <div className="absolute -bottom-1 left-2 w-3 h-3 bg-white rounded-full"></div>
+                          <div className="absolute -bottom-2 left-1 w-2 h-2 bg-white rounded-full"></div>
                         </div>
                       </div>
                       <div className="flex space-x-2">
@@ -65,13 +66,14 @@ export default function QuickPitch() {
                     {/* Phase 2: Lambo -> Cogent -> Lambo */}
                     <div className="flex items-center space-x-4">
                       <div className="relative w-16 h-16 flex items-center justify-center">
-                        {/* Thought bubble */}
-                        <div className="absolute -top-2 -right-2 w-8 h-6 bg-white rounded-full flex items-center justify-center">
-                          <div className="w-2 h-2 bg-white rounded-full absolute -bottom-1 -left-1"></div>
-                          <div className="w-1 h-1 bg-white rounded-full absolute -bottom-2 -left-2"></div>
-                        </div>
-                        <div className="w-12 h-8 bg-white rounded-lg flex items-center justify-center p-1">
-                          <img src="/lambo-removebg-preview.png" alt="Lambo" className="w-full h-full object-contain" />
+                        {/* Thought bubble - larger and properly positioned */}
+                        <div className="relative">
+                          <div className="w-14 h-10 bg-white rounded-2xl flex items-center justify-center p-1">
+                            <img src="/lambo-removebg-preview.png" alt="Lambo" className="w-full h-full object-contain" />
+                          </div>
+                          {/* Bubble tail */}
+                          <div className="absolute -bottom-1 left-2 w-3 h-3 bg-white rounded-full"></div>
+                          <div className="absolute -bottom-2 left-1 w-2 h-2 bg-white rounded-full"></div>
                         </div>
                       </div>
                       <div className="flex space-x-2">
