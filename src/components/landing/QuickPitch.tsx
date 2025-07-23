@@ -102,13 +102,10 @@ export default function QuickPitch() {
             <p className="text-lg font-medium text-white">
               Cogent solves this by eliminating the gap between intention and implementation
             </p>
+            </Card>
           </div>
         </div>
       </div>
     </section>
-  )
-}
-  )
-}
   )
 }
